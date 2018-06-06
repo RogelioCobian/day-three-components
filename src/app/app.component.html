@@ -17,8 +17,16 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+<!-- <button type="button" class="btn btn-primary" (click)= "selectComponent">Pick One component</button> -->
+<!-- <div *ngIf="componentSelected">
+  <app-warning-message *ngIf="componentSelected === 'warning' "></app-warning-message>
+  <div app-success-message></div>
+  <div class="app-danger-message"></div>
+</div> -->
 
-<app-warning-message></app-warning-message>
-<div app-success-message></div>
-<div class="app-danger-message"></div>
-
+<button type="button" class="btn btn-primary" (click)= "selectComponent()">Pick One component</button>
+<div *ngIf="componentSelected">
+  <app-warning-message *ngIf= "index == 0 "></app-warning-message>
+  <div app-success-message *ngIf= "index == 1 "></div>
+  <div class="app-danger-message" *ngIf= "index == 2 "></div>
+</div>
